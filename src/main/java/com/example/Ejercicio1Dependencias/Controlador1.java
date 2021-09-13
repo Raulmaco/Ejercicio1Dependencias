@@ -7,8 +7,8 @@ public class Controlador1 {
     @Autowired
     Persona persona;
 
-    @GetMapping("/controlador1/persona")
-    public Persona recibePersona(@RequestParam(required = true) String nombreP, @RequestParam(required = false) String poblacion, @RequestParam(required=false) Integer edad)
+    @GetMapping("/controlador1/addPersona")
+    public Persona recibePersona(@RequestHeader(required = true) String nombreP, @RequestHeader(required = false) String poblacion, @RequestHeader(required=false) Integer edad)
     {
         if(poblacion ==null){
             poblacion ="";
